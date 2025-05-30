@@ -17,14 +17,3 @@ spec:
           image: molax2/forum-frontend:latest
           ports:
             - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: forum-frontend
-spec:
-  selector:
-    app: forum-frontend
-  ports:
-    - port: 80
-      targetPort: 80
