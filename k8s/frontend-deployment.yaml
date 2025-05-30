@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nelove288/forum-frontend:latest
+          image: molax2/forum-frontend:latest
           ports:
             - containerPort: 80
 ---
