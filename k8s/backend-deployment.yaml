@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forum-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: forum-backend
+  template:
+    metadata:
+      labels:
+        app: forum-backend
+    spec:
+      containers:
+        - name: backend
+          image: nelove288/forum-backend:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: forum-backend
+spec:
+  selector:
+    app: forum-backend
+  ports:
+    - port: 8080
+      targetPort: 8080
