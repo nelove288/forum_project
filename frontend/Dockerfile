@@ -16,3 +16,14 @@ COPY . .
 
 # 빌드 실행
 RUN npm run build
+
+# 2단계: Serve with nginx
+FROM nginx:stable-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+
+# (Optional) Custom nginx config
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
