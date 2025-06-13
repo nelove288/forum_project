@@ -6,7 +6,7 @@ pipeline {
         COMMIT_HASH = "${env.GIT_COMMIT.take(7)}"
         TAG = "${COMMIT_HASH}"
         FULL_IMAGE = "${IMAGE_NAME}:${TAG}"
-        ARGOCD_SERVER = "argocd.example.com"  // ArgoCD 도메인 또는 IP
+        ARGOCD_SERVER = "http://localhost:8081"  // ArgoCD 도메인 또는 IP
         ARGOCD_APP_NAME = "forum-frontend"
     }
 
