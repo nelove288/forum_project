@@ -1,14 +1,14 @@
-# Step 1: Build
 FROM node:18 as build
 
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY ./ ./
-RUN npm run build
 
-# Step 2: Serve
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+COPY package*.json ./
+
+RUN npm install
+
+# 권한 문제 해결용 권한 부여
+RUN chmod -R 755 node_modules/.bin
+
+COPY ./ ./
+
+RUN npm run build
