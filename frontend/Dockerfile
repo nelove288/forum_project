@@ -4,10 +4,11 @@ WORKDIR /app
 
 COPY package*.json ./
 
+# devDependencies 포함 설치
 RUN npm install
 
-# 권한 문제 해결용 권한 부여
-RUN chmod +x node_modules/.bin/react-scripts
+# 실행 권한 부여
+RUN chmod -R +x node_modules/.bin
 
 COPY ./ ./
 
