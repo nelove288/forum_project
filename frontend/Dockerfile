@@ -3,7 +3,7 @@ FROM node:18 as build
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install react-scripts --save
 
 # react-scripts에 실행 권한 부여
 RUN chmod -R 755 ./node_modules
