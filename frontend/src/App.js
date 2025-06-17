@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          프로젝트 무중단 배포 확인~~
+          자동 sync 설정 후 배포 확인~~~
         </p>
         <a
           className="App-link"
