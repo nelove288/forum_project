@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          자동 sync 설정 후 배포 확인~~~
+          자동 sync 설정 후 롤링업데이트 배포 확인~~~
         </p>
         <a
           className="App-link"
