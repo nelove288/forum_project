@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          무중단 자동 배포 확인 테스트~~~~~ v1.0.3
+          새로고침 해야하는지 테스트~~~~ v1.0.4
         </p>
         <a
           className="App-link"
