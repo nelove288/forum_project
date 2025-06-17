@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          자동 sync 설정 후 롤링업데이트 배포 확인~~~
+          버전 태그로 바로 새로고침 되는지 확인해보기
         </p>
         <a
           className="App-link"
