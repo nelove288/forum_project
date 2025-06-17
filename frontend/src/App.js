@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          버전 태그로 바로 새로고침 되는지 확인해보기
+          무중단 자동 배포 확인 테스트~~~~~
         </p>
         <a
           className="App-link"

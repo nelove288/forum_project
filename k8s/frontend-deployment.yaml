@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: molax2/forum-frontend:v1.0.0
+          image: molax2/forum-frontend:v1.0.1
           ports:
             - containerPort: 80
           readinessProbe:
